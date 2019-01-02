@@ -29,12 +29,4 @@ class SponsorActionCreator @Inject constructor(
             dispatcher.dispatch(Action.SponsorLoadingStateChanged(LoadingState.INITIALIZED))
         }
     }
-
-    fun openSponsorLink(url: String) = launch {
-        dispatcher.dispatch(Action.SponsorOpenLink(url))
-    }
-
-    fun clearSponsorLink() = launch {
-        dispatcher.dispatch(Action.SponsorOpenLink(null))
-    }
 }
